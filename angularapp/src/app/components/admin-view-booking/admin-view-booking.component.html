@@ -1,0 +1,52 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow" routerLink="/adminDashboard" style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/adminDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Admin</a>
+                    <a routerLink="/adminViewResort">View Resort</a>
+           
+            <a (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+
+<h1>Resort Booking Details</h1>
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>User Name</th>
+            <th>Resort Name</th>
+            <th>Number of Persons</th>
+            <th>From Date</th> 
+            <th>To Date</th> 
+            <th>Price</th> 
+            <th>Address</th> 
+            <th>Action</th> 
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let booking of bookings;index as i">
+            <td>{{i+1}}</td>
+            <td>{{booking.user?.username}}</td>
+            <td>{{booking.resort?.resortName}}</td>
+            <td>{{booking.noOfpersons}}</td>
+            <td>{{booking.fromDate | date:'yyyy-MM-dd'}}</td>
+            <td>{{booking.toDate | date:'yyyy-MM-dd'}}</td>
+            <td>{{booking.totalPrice}}</td>
+            <td>{{booking.address}}</td>
+
+            <td>
+                <button class="accepted_btn" (click)="accepet(booking)" *ngIf="booking.status == 'Pending...'">Accept</button>
+                <button class="accepted_btn" *ngIf="booking.status == 'APPROVED'" disabled >Booked</button>
+
+                <button class="reject_btn" (click)="reject(booking)" >Reject</button>
+                <!-- <button class="reject_btn" *ngIf="booking.status == 'REJECTED'" disabled >Rejected</button> -->
+
+            </td>
+        </tr>
+    </tbody>
+</table>

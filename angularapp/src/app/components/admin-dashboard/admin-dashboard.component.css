@@ -1,0 +1,319 @@
+.nav-container {
+    display: flex;
+    /* position: fixed; */
+    margin-left: -8px;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.85rem;
+    background-color: rgba(236, 240, 241, 0);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    overflow-x: hidden; /* Rounded corners */
+}
+ 
+.menu {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    align-items: center;
+   
+}
+img{
+    height: 120px; width: 120px; 
+    background-color: rgba(255, 255, 255, 0.71);
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.glow {
+    /* padding-left: 50px; */
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
+    }
+    to {
+        text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+    }
+}
+
+
+.a_nav, #a_nav {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.331);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+ 
+.a_nav:hover, #a_nav:hover{
+    box-shadow: 0px 0px 5px 5px #fafdfd;
+    background-color: burlywood;
+    color: white;
+}
+.a_nav:active{
+    box-shadow: 0px 0px 5px 5px #fafdfd;
+    background-color: green;
+    color: white;
+}
+ 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+ 
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+ 
+.dropdown-content a:hover {
+    background-color: burlywood;
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+.dropbtn:hover {
+    color: black;
+    background-color: burlywood;
+    padding: 10px;
+    border-radius: 5px;
+}
+ 
+.head_message{
+    color: rgb(17, 17, 17);
+    text-shadow: 5px 4px 10px rgb(244, 244, 81);
+}
+ 
+.content{
+    /* margin-top: 50px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 155px;
+    text-align: center;
+    border-color: gainsboro;
+}
+.innerContent {
+    padding: 20px;
+    border-radius: 0; 
+    border: black solid 2px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.692);
+}
+ 
+.outer-container {
+    background-image: url('https://img.freepik.com/premium-photo/luxury-hotel-lobby-interior-design-with-marble-floors-wooden-walls-comfortable-seating_14117-728414.jpg?w=996');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    background-color: rgba(255, 255, 255, 0.954); /* Semi-transparent background */
+    /* overflow-x: hidden; */
+}
+ 
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+ 
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    length: 230px;
+    margin: 10px;
+    text-align: center;
+}
+ 
+.card:hover{
+    transform: scale(1.3);
+}
+.card img {
+   
+        width: 200px;
+        height: 230px;
+        transition: transform 0.3s ease;
+     
+}
+ 
+.card-content {
+    padding: 20px;
+}
+ 
+.card-content h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+ 
+.card-content p {
+    font-size: 20px;
+    color: #666;
+}
+
+
+/* footer section start */
+* {
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-size: 14px;
+    background: #fff;
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: Poppins, sans-serif;
+  }
+ 
+  #footer, #footer2 {
+    background: #f7f7f7;
+    color: white;
+    padding-top: 7rem;
+  }
+ 
+  #footer {
+    background-color: rgba(0, 0, 0, 0.374);padding-top: 2px;
+    display: flex;
+  }
+ 
+  #footer2 {
+    margin-top: 0;
+    background-image: url(../../../assets/images/Mountain.jpg);
+  }
+ 
+  .logo-footer {
+    max-width: 170px;
+    border-radius: 80%;
+    border-style: hidden;
+  }
+ 
+  .social-links h2, .useful-link h2, .address h2 {
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+ 
+  .social-links img, .useful-link img, .address img {
+    padding-bottom: 15px;
+  }
+ 
+  .social-icons, .use-links, .address-links {
+    color: #777;
+    line-height: 32px;
+  }
+ 
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+ 
+  .social-icons a {
+    color: white;
+  }
+ 
+  .social-icons a:hover {
+    color: blue;
+  }
+ 
+  .social-icons a i {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    color: orange;
+    font-size: 16px;
+    margin-right: 12px;
+  }
+ 
+  li {
+    list-style: none;
+  }
+ 
+  .use-links li i, .address-links li i {
+    font-size: 14px;
+    padding-right: 8px;
+    color: #898989;
+  }
+ 
+  .use-links li a, .address-links li a {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+  }
+ 
+  .use-links li a:hover, .address-links li a:hover {
+    color: blue;
+  }
+ 
+  .address-links li i {
+    font-size: 16px;
+    padding-right: 8px;
+    color: #82074a;
+  }
+ 
+  .address-links .address1 {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+  }
+ 
+  .copy-right-sec {
+    padding: 1.8rem;
+    background: #82074a;
+    color: #fff;
+    text-align: center;
+  }
+ 
+  .copy-right-sec a {
+    color: #fcd462;
+    font-weight: 500;
+  }
+ 
+  .a_footer {
+    text-decoration: none;
+  }
+ 
+ 
+  .row {
+    display: flex;
+    padding-left: 100px;
+}
+.social-links{
+    padding-left: 140px;
+  }
+.address{
+  padding-right: 40px;
+  padding-left: 130px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}

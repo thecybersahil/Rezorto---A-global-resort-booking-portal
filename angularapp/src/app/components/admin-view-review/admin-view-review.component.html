@@ -1,0 +1,44 @@
+<div class="outer-container">
+<div class="nav-container">
+    <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow" routerLink="/adminDashboard" style="cursor: pointer;">REZORTO</a>
+        </div>
+    <div class="menu">
+        <a routerLink="/adminDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Admin</a>
+        
+        <a routerLink="/addResort">Add Resort</a>
+        <a routerLink="/adminViewBooking" style="cursor: pointer;">Bookings</a>
+        <a routerLink="/adminViewReview">Reviews</a>
+            
+        <a (click)="logout()" style="cursor: pointer;">Logout</a>
+    </div>
+</div>
+
+
+
+<div class="head"><h2>Review Details</h2></div>
+<div >
+
+<table style="background-color: rgba(255, 0, 0, 0.103);">
+    <thead>
+        <th>S.No</th>
+        <th>User Name</th>
+        <th>Resort Name</th>
+        <th>Review</th>
+        <th>Rating (out of 5)</th>
+        <th>Date Created</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let review of reviews;index as i">
+            <td>{{i+1}}</td>
+            <td>{{review.user?.username}}</td>
+            <td>{{review.subject}}</td>
+            <td>{{review.body}}</td>
+            <td>{{review.rating}}</td>
+            <td>{{formatDate(review.dateCreated)}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+</div>

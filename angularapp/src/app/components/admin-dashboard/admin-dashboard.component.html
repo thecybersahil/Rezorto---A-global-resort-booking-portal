@@ -1,0 +1,111 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow"  style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/adminDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Admin</a>
+            
+                    <a class="a_nav" routerLink="/adminViewResort">View Resort</a>
+           
+            <a class="a_nav" (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+     
+     
+    <div class="content">
+        <div class="innerContent">
+            <h1 class="head_message">Online Resort Booking Portal</h1>
+            <p>
+                Please adhere to our policies: maintain accurate and honest information about your resorts, ensure timely responses to booking requests, and uphold high standards of customer service. Your commitment to these policies helps us provide a seamless and enjoyable experience for all our guests. Thank you for your dedication! 🌴🏨
+            </p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmJK8Ys_L3T-gXu6yeJZe6J0aAuHLZSPMImb91Vz7EcywrBN-_DoUAXXWsu_MBUkR-iRU&usqp=CAU/200x250" alt="Resort Image 1">
+                    <div class="card-content">
+                       
+                   
+                        <a class="a_nav" href="/addResort">Add Resort</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/15267666.jpg?k=735d9c56723cb5fe020654c0cfaf1a5b9d5cf3a79f421b0720e7a83c2e021d70&o=&hp=1/250x220" alt="Resort Image 2">
+                    <div class="card-content">
+                       
+                        <a class="a_nav" routerLink="/adminViewBooking" style="cursor: pointer;">Bookings</a>
+                     
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://media1.thrillophilia.com/filestore/zmarpi3nt66d9le8bkdhvyblq5pf_1184679_16041221120041475638.jpg" alt="Resort Image 3">
+                    <div class="card-content">
+                        <a class="a_nav"  routerLink="/adminViewReview">Reviews</a>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- footer -->
+    <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <a class="a_footer" href="index.html"><img src="../../../assets/RESOTO_updated_logo.jpg" alt="" class="img-fluid logo-footer"></a>
+                        <div class="footer-about">
+                            <p>Welcome to Rezorto, designed for both travelers and resort owners. Customers can explore a wide range of luxurious resorts tailored to their preferences and budget, enjoying seamless booking, exclusive deals, and exceptional customer service. Resort owners can effortlessly list their properties, reach a global audience, and manage bookings with ease. Join us to create unforgettable memories and grow your business at the world’s finest resorts.  </p>
+                        </div>
+     
+            </div>
+            <div class="col-md-3">
+                <div class="social-links">
+                <h2>Follow Us</h2>
+              
+                <div class="social-icons">
+                  <li><a class="a_footer" href="facebook.com"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                  <li><a class="a_footer" href="instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                  <li><a class="a_footer" href="linkedin.com"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                </div>
+              </div>
+                     
+     
+            </div>
+     
+     
+            <div class="col-md-3">
+              <div class="address">
+                <h2>Address</h2><br><br><br>
+                <i class="fa-solid fa-location-dot"></i> &nbsp;<span>Plot no. 64, Park Street, Industrial Area, Mahape, Mumbai</span><br><br><br>
+                <span>&nbsp;<i class="fa-solid fa-phone"></i> +91 90904****2</span><br><br><br>
+                <span>&nbsp;<i class="fa-solid fa-envelope"></i> team&#64;Rezorto.com</span>
+                <div class="address-links">
+                 
+                   
+                     
+                </div>
+              </div>
+            </div>
+                   
+          </div>
+        </div>
+     
+      </footer>
+      <!-- footer section end -->
+      <!-- footer copy right section start -->
+      <section id="copy-right">
+        <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+          Book your resort across the globe, Powered By <a href="/adminDashboard">Code Crafters Lti</a>
+     
+     
+        </div>
+     
+      </section>
+      <!-- footer copy right section end -->
+    </div>
+
+
+    

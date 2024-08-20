@@ -1,0 +1,203 @@
+.container{
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+img{
+    height: 120px; width: 120px; 
+    background-color: rgba(255, 255, 255, 0.71);
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.form_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.resortHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height:20vh; */
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+.resForm{
+    border: grey solid 2px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: rgb(52, 171, 52);
+    color: white;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+/* navbar */
+
+.nav-container {
+    display: flex;
+    /* position: fixed; */
+    margin-left: -8px;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.85rem;
+    /* background: rgb(251, 250, 249); Semi-transparent green background */
+    background-color: rgba(236, 240, 241, 0);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: -8px;
+    padding-bottom: 80px;
+    overflow-x: hidden; /* Rounded corners */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.331);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    box-shadow: 0px 0px 5px 5px #fafdfd;
+    background-color: blue;
+    color: white;
+}
+a:active{
+    box-shadow: 0px 0px 5px 5px #fafdfd;
+    background-color: green;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 9px;
+    /* background-color: #f9f9f9; */
+    background-color: rgba(128, 128, 128, 0.477);
+    color: white;
+    min-width: 114px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+.dropbtn:hover {
+    color: white;
+    background-color: blue;
+}
+
+.outer-container {
+    background-image: url('https://cdn.pixabay.com/photo/2017/12/16/22/22/bora-bora-3023437_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+
+
+body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+
+form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #ffffffbe;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .errorMsg{
+            color: red;
+        }

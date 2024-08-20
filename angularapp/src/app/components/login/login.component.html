@@ -1,0 +1,45 @@
+<div class="outer-container">
+<div class="login-page">
+
+  <div class="nav-container">
+    <img src="../.././../assets/logo-transparent-png.png" >
+    <div class="logo">
+        <a class="glow" routerLink="/" style="cursor: pointer;">REZORTO</a>
+    </div>
+      <div class="menu">
+          <a routerLink="/registration" style="cursor: pointer;">Register</a>
+          <a style="cursor: pointer;">Login</a>
+      </div>
+  </div>
+
+
+      <div class="container">
+          <h2>Login</h2>
+              <div class="content">
+                  <form [formGroup]="loginForm" (ngSubmit)="login()">
+                      <label for="email">Email<span style="color: red;">*</span></label><br>
+                      <input required type="text" formControlName="email"><br>
+                      <div *ngIf="email.touched && email.invalid" style="color: red;">*Email is required</div>
+      
+                      <label for="password">Password<span style="color: red;">*</span></label><br>
+                      <input required type="password" formControlName="password"><br>
+                      <div *ngIf="password.touched && password.invalid" style="color: red;">*Password is required</div><br>
+                      
+      
+                      <button class="btn" type="submit" [disabled]="loginForm.invalid" >Login</button>
+                      <div><p>Don't have an account?</p>
+                      <a routerLink="/registration" style="color: blue">Register here</a>
+                      </div>
+      
+                  </form>
+              </div>
+          </div>
+
+          <div class="imgContainer">
+      
+          </div>
+  </div>
+
+  
+  
+</div>

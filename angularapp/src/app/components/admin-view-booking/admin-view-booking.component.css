@@ -1,0 +1,193 @@
+.nav-container {
+  display: flex;
+  margin-left: -8px;
+  width: 96%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.85rem;
+  background-color: rgba(236, 240, 241, 0);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: -8px;
+  overflow-x: hidden; /* Rounded corners */
+}
+ 
+img{
+  height: 120px; width: 120px;
+  background-color: rgba(255, 255, 255, 0.71);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+}
+ 
+.menu {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  align-items: center;
+ 
+}
+ 
+a {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.644);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+ 
+a:hover {
+  /* background-color:rgba(247, 212, 84, 0.9) ; Darker green on hover */
+  box-shadow: 0px 0px 5px 5px #fafdfd;
+  background-color: burlywood;
+  color: white;
+}
+ 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+ 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+ 
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+ 
+.dropdown-content a:hover {
+  background-color: burlywood;
+}
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+ 
+.dropbtn:hover {
+  color: black;
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 5px;
+}
+ 
+ 
+ 
+.head {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+h1{
+  color: white;
+  text-align: center;
+  text-shadow: 2px 4px 4px black;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #f9f9f9a2; /* Light grey background for the table */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+ 
+th, td {
+  border: 1px solid #ddd; /* Light grey border */
+  padding: 10px; /* Corrected padding */
+  text-align: center;
+}
+ 
+th {
+  background-color: rgba(229, 146, 79, 0.726);
+  color: #ffffff;
+  font-weight: bold;
+}
+ 
+td {
+  background-color: #ffffffa5; /* White background for table cells */
+  color: #333; 
+  width: 100px;
+}
+ 
+tr:nth-child(even) td {
+  background-color: #f2f2f2; /* Light grey background for even rows */
+}
+ 
+tr:hover td {
+ 
+  color: #000; /* Black text color on hover */
+}
+ 
+ 
+ 
+.head_message{
+  color: green;
+}
+.content{
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+  border-color: gainsboro;
+}
+.innerContent{
+ 
+  padding: 40px;
+  border-radius: 20px;
+  border: black solid  2px;
+  margin-top: 100px;
+}
+ 
+.accepted_btn{
+  color: white;
+  background-color: green;
+  margin: 5px;
+  border-style: hidden;
+  padding: 4px;
+}
+.reject_btn{
+  color: white;
+  background-color: red;
+  margin: 5px;
+  border-style: hidden;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-bottom: 4px;  
+  padding-top: 4px;  
+}
+ 
+ 
+ 
+.outer-container {
+  background-image: url('https://cdn.pixabay.com/photo/2021/11/17/15/24/swimming-pool-6803851_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px;
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  height:200vh;
+  background-color: rgba(255, 255, 255, 0.954); /* Semi-transparent background */
+  /* overflow-x: hidden; */
+}

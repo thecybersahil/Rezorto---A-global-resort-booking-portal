@@ -1,0 +1,63 @@
+<div class="outer-container">
+ 
+  <div class="nav-container">
+    <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow" routerLink="/adminDashboard" style="cursor: pointer;">REZORTO</a>
+        </div>
+    <div class="menu">
+      <a routerLink="/adminDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Admin</a>
+        <a routerLink="/adminViewResort">View Resorts</a>
+          <a routerLink="/adminViewBooking" style="cursor: pointer;">Bookings</a>
+          <a routerLink="/adminViewReview">Reviews</a>
+          <a (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+      </div>
+     
+     
+      <div>
+        
+   
+       
+        <div class="form_content">
+          <div class="resForm">
+            <form [formGroup]="resortForm" (ngSubmit)="addNewResort()">
+              <label for="name">Resort Name</label><span style="color: red;">*</span><br>
+              <input type="text" id="name" formControlName="resortName"><br><br>
+              <div *ngIf="resortName?.touched && resortName?.invalid" class="errorMsg">*Resort name is required</div><br>
+             
+              <label for="image">Resort Image</label><span style="color: red;">*</span><br>
+              <input type="file" (change)="onFileChange($event)" accept="image/*" formControlName="resortImageUrl"><br>
+              <!-- <input type="hidden"  [value]="selectedImage"> -->
+              <div *ngIf="resortImageUrl?.touched && resortImageUrl?.invalid"  class="errorMsg" >*Resort image is required</div><br>
+             
+              <label for="location">Resort Location</label><span style="color: red;">*</span><br>
+              <textarea id="location" formControlName="resortLocation"></textarea><br><br>
+              <div *ngIf="resortLocation?.touched && resortLocation?.invalid" class="errorMsg" >*Resort location is required</div><br>
+             
+              <label for="description">Resort Description</label><span style="color: red;">*</span><br>
+              <textarea id="description" formControlName="description"></textarea><br><br>
+              <div *ngIf="description?.touched && description?.invalid" class="errorMsg" >*Resort description is required</div><br>
+             
+              <label for="availability">Resort Available Status</label><span style="color: red;">*</span><br>
+              <select name="availability" id="availability" formControlName="resortAvailableStatus">
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+              </select><br><br>
+              <div *ngIf="resortAvailableStatus?.touched && resortAvailableStatus?.invalid" class="errorMsg" >*Resort availability is required</div><br>
+             
+              <label for="price">Price</label><span style="color: red;">*</span><br>
+              <input type="number" id="price" formControlName="price" min="1"><br><br>
+              <div *ngIf="price?.touched && price?.invalid" class="errorMsg" >*Resort price is required</div><br>
+             
+              <label for="capacity">Capacity</label><span style="color: red;">*</span><br>
+              <input type="number" id="capacity" formControlName="capacity" min="50"><br><br>
+              <div *ngIf="capacity?.touched && capacity?.invalid" class="errorMsg" >*Resort capacity should be atleast 50</div><br>
+             
+              <button [disabled]="resortForm.invalid" class="btn" type="submit">Add Resort</button>
+            </form>
+          </div>
+        </div>
+         
+        </div>
+        </div>

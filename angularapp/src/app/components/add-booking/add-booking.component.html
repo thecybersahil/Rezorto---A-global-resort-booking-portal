@@ -1,0 +1,87 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow" routerLink="/" style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/customerDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Customer</a>
+            
+            <a routerLink="/customerViewResort">Resorts</a>
+            <a routerLink="/customerViewBooking">Bookings</a>
+               
+     
+            <div class="dropdown">
+                <a class="dropbtn">Reviews</a>
+                <div class="dropdown-content">
+                    <a routerLink="/addReview">Add Reviews</a>
+                    <a routerLink="/customerViewReview">View Reviews</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+<h1 style="text-align: center;color: white;">Add Booking Details</h1>
+    <form (ngSubmit)="addBooking()" [formGroup]="bookingForm">
+        
+        <label for="resortname">Resort Name</label>
+        <br>
+        <input type="text" readonly [value]="resort?.resortName">
+        <br>
+    
+        <label for="resortprice">Total Price</label>
+        <br>
+        <input type="number" readonly [value]="resort?.price">
+        <br>
+    
+        <label for="resortlocation">Resort Location</label>
+        <br>
+        <input type="text" readonly [value]="resort?.resortLocation">
+        <br>
+    
+        <label for="resortcapacity">Resort Capacity</label>
+        <br>
+        <input type="text" readonly [value]="resort?.capacity">
+        <br>
+    
+        <label for="address">Your Address<span style="color: red;">*</span></label>
+        <br>
+        <textarea name="address" id="address" cols="30" rows="10" formControlName="address"></textarea>
+        <div *ngIf="address.touched && address.invalid" class="errorMsg" >Address is required!</div>
+        <br>
+    
+        <label for="noOfPersons">Number of persons<span style="color: red;">*</span></label>
+        <br>
+        <input type="number" name="noOfPersons" formControlName="noOfpersons" min="1">
+    
+        <div *ngIf="noOfpersons.touched && noOfpersons.invalid" class="errorMsg" >Number of persons should be between 1 and the resort's maximum capacity!</div>
+        <br>
+    
+        <label for="fromdate">From Date<span style="color: red;">*</span></label>
+        <br>
+        <input type="date" name="fromdate" formControlName="fromDate">
+        
+        <div *ngIf="fromDate?.invalid && (fromDate?.dirty || fromDate?.touched)">
+            <span *ngIf="fromDate?.errors?.required" class="errorMsg">From Date is required.</span>
+            <span *ngIf="fromDate?.errors?.fromDateInvalid" class="errorMsg">From date must be on or after Today's Date.</span>
+          </div>
+        <br>
+    
+        <label for="todate">To Date<span style="color: red;">*</span></label>
+        <br>
+        <input type="date" name="todate" formControlName="toDate">
+        <div *ngIf="toDate?.invalid && (toDate?.dirty || toDate?.touched)">
+            <span *ngIf="toDate?.errors?.required" class="errorMsg">To Date is required.</span>
+            <span *ngIf="toDate?.errors?.dateRangeInvalid" class="errorMsg">End date must be after start date.</span>
+          </div>
+        <br>
+        <br>
+        <button type="submit" [disabled]="bookingForm.invalid" >Make Payment</button>
+        <br>
+        <br>
+        <button type="button" (click)="cancel()">Cancel</button>
+    </form>
+</div>
+    

@@ -1,0 +1,12 @@
+# Spring Target
+
+springapp/target
+springapp/.mvn
+springapp/src/test
+
+
+
+#Angular
+
+angularapp/node_modules
+angularapp/package-lock.json

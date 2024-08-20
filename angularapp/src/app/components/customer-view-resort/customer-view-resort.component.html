@@ -1,0 +1,40 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow"style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/customerDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Customer</a>
+            
+            <a routerLink="/customerViewResort">Resorts</a>
+            <a routerLink="/customerViewBooking">Bookings</a>
+            <div class="dropdown">
+                <a class="dropbtn">Reviews</a>
+                <div class="dropdown-content">
+                    <a routerLink="/addReview">Add Reviews</a>
+                    <a routerLink="/customerViewReview">View Reviews</a>
+                </div>
+            </div>
+            <a (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+     
+    <div class="card-container">
+        <div class="card" *ngFor="let r of resorts; index as i">
+        <img src="../../../assets/images/{{r.resortImageUrl}}"alt="{{r.resortName}}" class="resort-image">
+            <div class="card-content">
+                <h3>{{r.resortName}}</h3>
+                <p>{{r.description}}</p>
+                <p>Status: {{r.resortAvailableStatus}}</p>
+                <p>Location: {{r.resortLocation}}</p>
+                <p>Capacity: {{r.capacity}}</p>
+                <p>Price: {{r.price}}</p>
+                <p>Rating: {{getResortRating(r.resortName)}}</p>
+                <button id="addBtn" routerLink="/addBooking" [queryParams]="{resortId: r.resortId}" *ngIf="r.resortAvailableStatus === 'Available'">Add Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

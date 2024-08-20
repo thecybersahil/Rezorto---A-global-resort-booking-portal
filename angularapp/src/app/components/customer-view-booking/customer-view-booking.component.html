@@ -1,0 +1,59 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow"  style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/customerDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Customer</a>
+            
+            <a routerLink="/customerViewResort">Resorts</a>
+                
+    
+            <div class="dropdown">
+                <a class="dropbtn">Reviews</a>
+                <div class="dropdown-content">
+                    <a routerLink="/addReview">Add Reviews</a>
+                    <a routerLink="/customerViewReview">View Reviews</a>
+                </div>
+            </div>
+            <a (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+    <h1 style="text-align: center ;color: rgba(245, 245, 245, 0.966);">Resort Booking Details</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Resort Name</th>
+                    <th>Address</th>
+                    <th>Number of Persons</th>
+                    <th>From Date</th> 
+                    <th>To Date</th> 
+                    <th>Price</th> 
+                    <th>Status</th> 
+                    <th>Action</th> 
+                </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let booking of allBookings;index as i">
+                <td>{{i+1}}</td>
+                <td>{{booking.resort?.resortName}}</td>
+                <td>{{booking.address}}</td>
+                <td>{{booking.noOfpersons}}</td>
+                <td>{{booking.fromDate | date:'yyyy-MM-dd'}}</td>
+                <td>{{booking.toDate |date:'yyyy-MM-dd'}}</td>
+                <td>{{booking.totalPrice}}</td>
+                <td>{{booking.status}}</td>
+                <td><button id="delete_btn" (click)="deleteBooking(booking.bookingId)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+
+

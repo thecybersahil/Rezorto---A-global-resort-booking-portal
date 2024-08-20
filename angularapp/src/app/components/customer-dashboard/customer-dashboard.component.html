@@ -1,0 +1,98 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow"  style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/customerDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Customer</a>
+            
+            <a class="a_nav" routerLink="/customerViewResort">Resorts</a>
+            <a class="a_nav" routerLink="/customerViewBooking">Bookings</a>
+               
+     
+            <div class="dropdown">
+                <a id="a_nav" class="dropbtn">Reviews</a>
+                <div class="dropdown-content">
+                    <a class="a_nav" routerLink="/addReview">Add Reviews</a>
+                    <a class="a_nav" routerLink="/customerViewReview">View Reviews</a>
+                </div>
+            </div>
+            <a class="a_nav" (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="card" *ngFor="let r of resorts; index as i">
+      <img src="../../../assets/images/{{r.resortImageUrl}}"alt="{{r.resortName}}" class="resort-image">
+      <div class="card-content">
+            <h2 class="card-title">{{r.resortName}}</h2>
+            <p class="card-description">{{r.description}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a class="a_footer" href="index.html"><img src="../../../assets/RESOTO_updated_logo.jpg" alt="" class="img-fluid logo-footer"></a>
+                    <div class="footer-about">
+                        <p>Welcome to Rezorto, designed for both travelers and resort owners. Customers can explore a wide range of luxurious resorts tailored to their preferences and budget, enjoying seamless booking, exclusive deals, and exceptional customer service. Resort owners can effortlessly list their properties, reach a global audience, and manage bookings with ease. Join us to create unforgettable memories and grow your business at the world’s finest resorts.  </p>
+                    </div>
+ 
+        </div>
+        <div class="col-md-3">
+            <div class="social-links">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+              <li><a class="a_footer" href="facebook.com"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+              <li><a class="a_footer" href="instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+              <li><a class="a_footer" href="linkedin.com"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+            </div>
+          </div>
+                 
+ 
+        </div>
+ 
+ 
+        <div class="col-md-3">
+          <div class="address">
+            <h2>Address</h2><br><br><br>
+            <i class="fa-solid fa-location-dot"></i> &nbsp;<span>Plot no. 64, Park Street, Industrial Area, Mahape, Mumbai</span><br><br><br>
+            <span>&nbsp;<i class="fa-solid fa-phone"></i> +91 90904****2</span><br><br><br>
+            <span>&nbsp;<i class="fa-solid fa-envelope"></i> team&#64;Rezorto.com</span>
+            <div class="address-links">
+             
+               
+                 
+            </div>
+          </div>
+        </div>
+               
+      </div>
+    </div>
+ 
+  </footer>
+  <!-- footer section end -->
+  <!-- footer copy right section start -->
+  <section id="copy-right">
+    <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+      Book your resort across the globe, Powered By <a href="/customerDashboard">Code Crafters Lti</a>
+ 
+ 
+    </div>
+ 
+  </section>
+  <!-- footer copy right section end -->

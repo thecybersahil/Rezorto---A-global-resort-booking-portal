@@ -1,0 +1,109 @@
+<div class="outer-container">
+    <div class="nav-container">
+        <img src="../.././../assets/logo-transparent-png.png" >
+        <div class="logo">
+            <a class="glow" routerLink="/adminDashboard" style="cursor: pointer;">REZORTO</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/adminDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Admin</a>
+           
+            <a routerLink="/addResort" class="dropbtn">Add Resort</a>
+            <a routerLink="/adminViewBooking" style="cursor: pointer;">Bookings</a>
+                    <a routerLink="/adminViewReview">Reviews</a>
+            <a  (click)="logout()" style="cursor: pointer;">Logout</a>
+        </div>
+    </div>
+     
+    <div class="innerContent">
+        <div class="view" *ngIf="!selectedResort">
+            <table border="2" style="border-color: black;">
+                <thead>
+                    <tr style="font-weight: bold;">
+                        <td>S.No</td>
+                        <td>Resort Name</td>
+                        <td>Resort Description</td>
+                        <td>Resort Image</td>
+                        <td>Resort Available Status</td>
+                        <td>Resort Location</td>
+                        <td>Capacity</td>
+                        <td>Price</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of resorts; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{r.resortName}}</td>
+                        <td>{{r.description}}</td>
+                        <!-- <td><img src="{{imagesUrl[i]}}"alt="img"height="250px"width="250px"></td> -->
+                        <td><img src="../../../assets/images/{{r.resortImageUrl}}"alt="img"height="250px"width="250px"></td>
+                        <td>{{r.resortAvailableStatus}}</td>
+                        <td>{{r.resortLocation}}</td>
+                        <td>{{r.capacity}}</td>
+                        <td>{{r.price}}</td>
+                        <td>
+                            <button class="edit_btn" (click)="edit(r)">Edit</button>
+                            <button class="delete_btn" (click)="deleteResort(r.resortId)" >Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+           
+         
+         
+        <!-- Editing Resort -->
+         
+        <div class="view" *ngIf="selectedResort">
+            <h2 class="resortHeading" >Resort Details</h2>
+            <div class="form_content">
+                <div class="resForm" >
+                    <form [formGroup]="resortForm" (ngSubmit)="updateResort()" >
+                        <table border="1">
+                            <thead>
+                                <tr style="font-weight: bold;">
+                                 <!-- <td>S.No</td> -->
+                                    <td>Resort Name</td>
+                                    <td>Resort Description</td>
+                                    <td>Resort Image</td>
+                                    <td>Resort Available Status</td>
+                                    <td>Resort Location</td>
+                                    <td>Capacity</td>
+                                    <td>Price</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" id="name" formControlName="resortName" ></td>
+         
+                                    <td><textarea id="description" formControlName="description"></textarea></td>
+         
+                                    <td><input type="file" (change)="onFileChange($event)" accept="image/*" formControlName="resortImageUrl"></td>
+                                    <!-- <td><input type="file" id="image" formControlName="resortImageUrl" alt="Hotel Image" ></td> -->
+   
+         
+                                    <td><select name="availability" id="availability" formControlName="resortAvailableStatus" >
+                                        <option value="Available">Available</option>
+                                        <option value="Not Available">Not Available</option>
+                                    </select></td>
+         
+                                    <td><textarea id="location"formControlName="resortLocation"></textarea></td>
+         
+                                    <td><input type="text" id="capacity" formControlName="capacity"></td>
+         
+                                    <td><input type="text" id="price" formControlName="price"></td>
+         
+                                    <td>
+                                        <button class="save_btn" type="submit">Save</button>
+                                        <button class="cancel_btn" (click)="cancelResort()" >Cancel</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,83 @@
+<div class="outer-container">
+<div class="nav-container">
+    <img src="../.././../assets/logo-transparent-png.png" >
+    <div class="logo">
+        <a class="glow"  style="cursor: pointer;">REZORTO</a>
+    </div>
+    <div class="menu">
+        <a routerLink="/customerDashboard" style="cursor: pointer;" class="a_nav" >{{username}}/Customer</a>
+        <a routerLink="/customerViewResort">Resorts</a>
+        <a routerLink="/customerViewBooking">Bookings</a>
+           
+ 
+        <div class="dropdown">
+            <a routerLink="/customerViewReview" >View Reviews</a>
+            
+        </div>
+    </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+
+ 
+    <div class="head"><h2>Add Review Details</h2></div>
+    <div class="container">
+    <div class="content">
+        <div class="feedbackForm">
+    <form [formGroup]="reviewForm" (ngSubmit)="addNewReview()">
+        <table>
+            <tr>
+                <td><label for="username">User Name<br></label></td>
+                </tr>
+            <tr>
+                <td><input  type="text" id="username" readonly [value]="username"></td>
+            </tr>
+            <tr>
+                <td><label for="subject">Resort Name</label><span style="color: red;" >*</span></td>
+            </tr>
+            <tr >
+               
+                <select id="subject" formControlName="subject">
+                    <option value="" disabled selected>Select Resort Name</option>
+                   <option *ngFor="let resort of resorts" [value]="resort.resortName" >{{ resort.resortName }}</option>
+                  </select>
+            </tr>
+            <tr>
+                <td><label for="body">Feedback comments</label><span style="color: red;" >*</span></td>
+            </tr>
+            <tr>    
+                <td><textarea rows="4" cols="50" id="body" formControlName="body"></textarea>
+                <div *ngIf="!body.valid && body.touched" style="color: red;">*Feedback comment is required</div></td>
+            </tr>
+                <tr>
+                    <td><label for="rating"><span style="align-items: center;">Rating</span></label><span style="color: red;" >*</span></td></tr>
+                <div class="rating">
+                    <tr>
+   
+                        <label>
+                            <input type="radio" name="rating" value="1" formControlName="rating">1
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="2 "formControlName="rating">2
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="3" formControlName="rating">3
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="4" formControlName="rating">4
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="5" formControlName="rating">5
+                        </label>
+                    </tr>
+                </div>
+            <button type="submit" >Submit</button>
+        </table>
+    </form>
+    </div>
+    </div>
+    </div>
+</div>
