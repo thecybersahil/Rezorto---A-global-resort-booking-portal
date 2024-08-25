@@ -24,7 +24,8 @@ import com.examly.springapp.service.UserService;
  
 @RestController
 
-@CrossOrigin(origins ="https://8081-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io",allowedHeaders="*")
+// @CrossOrigin(origins ="https://8081-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io",allowedHeaders="*")
+@CrossOrigin(origins ="http://localhost:8081",allowedHeaders="*")
 
 public class AuthController {
      private static final Logger logger = LoggerFactory.getLogger(UserDetailsServiceImpl.class);

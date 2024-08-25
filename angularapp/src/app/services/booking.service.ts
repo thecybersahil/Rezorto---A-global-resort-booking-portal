@@ -12,7 +12,8 @@ export class BookingService {
 
 
 
- public apiUrl="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+//  public apiUrl="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+ public apiUrl="http://localhost:8080";
 
 
 

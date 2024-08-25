@@ -10,7 +10,8 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
 
-  public apiUrl:string="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+  // public apiUrl:string="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+  public apiUrl:string="http://localhost:8080";
 
   //private headers = new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem(`token`)}`);
   

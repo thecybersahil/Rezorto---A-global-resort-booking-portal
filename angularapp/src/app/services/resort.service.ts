@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 export class ResortService {
 
 
-  public apiUrl="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+  // public apiUrl="https://8080-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io";
+  public apiUrl="http://localhost:8080";
 
 
   constructor(private httpClient:HttpClient) { }

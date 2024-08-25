@@ -17,7 +17,8 @@ public class CorsConfig {
         config.setAllowCredentials(true);
 
 
-        config.addAllowedOrigin("https://8081-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io");
+        // config.addAllowedOrigin("https://8081-eadaebaafdadfabeaddecdfdbadefdaa.premiumproject.examly.io");
+        config.addAllowedOrigin("http://localhost:8081");
 
 
         config.addAllowedHeader("*");
